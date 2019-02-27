@@ -17,6 +17,10 @@
 		38DBFFA12224E53C00D41F3C /* ComicsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DBFF9F2224E53C00D41F3C /* ComicsTableViewCell.swift */; };
 		38DBFFA22224E53C00D41F3C /* ComicsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DBFFA02224E53C00D41F3C /* ComicsTableViewCell.xib */; };
 		38DBFFA42224E63400D41F3C /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DBFFA32224E63400D41F3C /* Comic.swift */; };
+		38DBFFA62225F0FA00D41F3C /* Monaco.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38DBFFA52225F0FA00D41F3C /* Monaco.otf */; };
+		38F6C763222633470063A3E6 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F6C762222633470063A3E6 /* Protocols.swift */; };
+		38F6C7672226C47C0063A3E6 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F6C7662226C47C0063A3E6 /* FavoritesViewController.swift */; };
+		38F6C7692226C68E0063A3E6 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F6C7682226C68E0063A3E6 /* Badge.swift */; };
 		94F13A6A6C40569AA516D719 /* Pods_studio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7AE5EE1F766BE853D149BA /* Pods_studio.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +38,10 @@
 		38DBFF9F2224E53C00D41F3C /* ComicsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsTableViewCell.swift; sourceTree = "<group>"; };
 		38DBFFA02224E53C00D41F3C /* ComicsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComicsTableViewCell.xib; sourceTree = "<group>"; };
 		38DBFFA32224E63400D41F3C /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
+		38DBFFA52225F0FA00D41F3C /* Monaco.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Monaco.otf; sourceTree = "<group>"; };
+		38F6C762222633470063A3E6 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		38F6C7662226C47C0063A3E6 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		38F6C7682226C68E0063A3E6 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		8394C6EC28AC75081C3101BC /* Pods-studio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studio.release.xcconfig"; path = "Pods/Target Support Files/Pods-studio/Pods-studio.release.xcconfig"; sourceTree = "<group>"; };
 		8F6921580F8E48B398BD1F1B /* Pods-studio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-studio/Pods-studio.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,12 +90,16 @@
 			children = (
 				38685189222322B9000A3C50 /* AppDelegate.swift */,
 				3868518B222322B9000A3C50 /* ComicsViewController.swift */,
+				38F6C7662226C47C0063A3E6 /* FavoritesViewController.swift */,
+				38F6C762222633470063A3E6 /* Protocols.swift */,
+				38F6C7682226C68E0063A3E6 /* Badge.swift */,
 				38DBFF9D2224E3F900D41F3C /* ComicsViewModel.swift */,
 				38DBFFA32224E63400D41F3C /* Comic.swift */,
 				38DBFF9F2224E53C00D41F3C /* ComicsTableViewCell.swift */,
 				38DBFFA02224E53C00D41F3C /* ComicsTableViewCell.xib */,
 				3868518D222322B9000A3C50 /* Main.storyboard */,
 				38685193222322BB000A3C50 /* Assets.xcassets */,
+				38DBFFA52225F0FA00D41F3C /* Monaco.otf */,
 				38685195222322BB000A3C50 /* LaunchScreen.storyboard */,
 				38685198222322BB000A3C50 /* Info.plist */,
 				38685190222322B9000A3C50 /* studio.xcdatamodeld */,
@@ -114,6 +126,7 @@
 				38685182222322B9000A3C50 /* Sources */,
 				38685183222322B9000A3C50 /* Frameworks */,
 				38685184222322B9000A3C50 /* Resources */,
+				E6A0C7DBCF92490BB2F5B503 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DBFFA62225F0FA00D41F3C /* Monaco.otf in Resources */,
 				38685197222322BB000A3C50 /* LaunchScreen.storyboard in Resources */,
 				38DBFFA22224E53C00D41F3C /* ComicsTableViewCell.xib in Resources */,
 				38685194222322BB000A3C50 /* Assets.xcassets in Resources */,
@@ -194,6 +208,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E6A0C7DBCF92490BB2F5B503 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-studio/Pods-studio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-studio/Pods-studio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -203,9 +239,12 @@
 			files = (
 				3868518C222322B9000A3C50 /* ComicsViewController.swift in Sources */,
 				38DBFFA42224E63400D41F3C /* Comic.swift in Sources */,
+				38F6C7672226C47C0063A3E6 /* FavoritesViewController.swift in Sources */,
+				38F6C763222633470063A3E6 /* Protocols.swift in Sources */,
 				3868518A222322B9000A3C50 /* AppDelegate.swift in Sources */,
 				38DBFF9E2224E3F900D41F3C /* ComicsViewModel.swift in Sources */,
 				38DBFFA12224E53C00D41F3C /* ComicsTableViewCell.swift in Sources */,
+				38F6C7692226C68E0063A3E6 /* Badge.swift in Sources */,
 				38685192222322B9000A3C50 /* studio.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

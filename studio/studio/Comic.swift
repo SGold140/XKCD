@@ -16,7 +16,7 @@ class Comic {
     var published_date: String
     var alternate_text: String
     
-    init(title: String, number: Int, image: String, publishedDate: Date, alternateText: String) {
+    init(title: String, number: String, image: String, publishedDate: String, alternateText: String) {
         self.title = title
         self.number = number
         self.image = image
