@@ -23,41 +23,54 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="530.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5f-Ve-7fk">
-                        <rect key="frame" x="38" y="85" width="240" height="315"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d5f-Ve-7fk">
+                        <rect key="frame" x="38" y="85" width="244" height="315"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZG-eB-jQX">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZG-eB-jQX">
                         <rect key="frame" x="38" y="56" width="40" height="14"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="MonacoBSemi" family="MonacoBSemi" pointSize="11"/>
                         <color key="textColor" red="0.31372549019607843" green="0.35686274509803922" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgt-gO-vF9">
-                        <rect key="frame" x="122" y="56" width="115" height="14"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgt-gO-vF9">
+                        <rect key="frame" x="122" y="56" width="26.5" height="14"/>
                         <fontDescription key="fontDescription" name="MonacoBSemi" family="MonacoBSemi" pointSize="11"/>
                         <color key="textColor" red="0.31372549020000001" green="0.35686274509999999" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alternate Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKK-Yq-cJM">
-                        <rect key="frame" x="38" y="443" width="240" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alternate Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKK-Yq-cJM">
+                        <rect key="frame" x="38" y="443" width="244" height="14"/>
                         <fontDescription key="fontDescription" name="MonacoBSemi" family="MonacoBSemi" pointSize="11"/>
                         <color key="textColor" red="0.31372549020000001" green="0.35686274509999999" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxJ-Uk-mh8">
-                        <rect key="frame" x="38" y="25" width="253" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxJ-Uk-mh8">
+                        <rect key="frame" x="38" y="25" width="75.5" height="31"/>
                         <fontDescription key="fontDescription" name="MonacoBSemi" family="MonacoBSemi" pointSize="25"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" red="0.58823529409999997" green="0.6588235294" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="mKK-Yq-cJM" firstAttribute="leading" secondItem="yZG-eB-jQX" secondAttribute="leading" id="0Df-WY-GAp"/>
+                    <constraint firstItem="mKK-Yq-cJM" firstAttribute="top" secondItem="d5f-Ve-7fk" secondAttribute="bottom" constant="43" id="GGa-25-mc0"/>
+                    <constraint firstItem="d5f-Ve-7fk" firstAttribute="top" secondItem="yZG-eB-jQX" secondAttribute="bottom" constant="15" id="Gqm-Xr-bQN"/>
+                    <constraint firstItem="cgt-gO-vF9" firstAttribute="centerY" secondItem="yZG-eB-jQX" secondAttribute="centerY" id="gCN-QF-KWd"/>
+                    <constraint firstItem="cgt-gO-vF9" firstAttribute="leading" secondItem="yZG-eB-jQX" secondAttribute="trailing" constant="44" id="gKt-fh-q5O"/>
+                    <constraint firstItem="mKK-Yq-cJM" firstAttribute="trailing" secondItem="d5f-Ve-7fk" secondAttribute="trailing" id="mAM-b8-b4t"/>
+                    <constraint firstItem="mKK-Yq-cJM" firstAttribute="leading" secondItem="d5f-Ve-7fk" secondAttribute="leading" id="v04-Ph-Zpk"/>
+                    <constraint firstItem="mKK-Yq-cJM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="22" id="xCB-dr-WSd"/>
+                    <constraint firstItem="mKK-Yq-cJM" firstAttribute="leading" secondItem="XxJ-Uk-mh8" secondAttribute="leading" id="xFu-fc-n3g"/>
+                    <constraint firstItem="yZG-eB-jQX" firstAttribute="top" secondItem="XxJ-Uk-mh8" secondAttribute="bottom" id="yaO-EE-Shk"/>
+                </constraints>
             </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="njF-e1-oar" firstAttribute="top" secondItem="XxJ-Uk-mh8" secondAttribute="bottom" constant="-56" id="JTd-pM-snz"/>
+                <constraint firstItem="d5f-Ve-7fk" firstAttribute="centerX" secondItem="njF-e1-oar" secondAttribute="centerX" id="ViJ-VD-1Du"/>
+                <constraint firstItem="mKK-Yq-cJM" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="bottom" constant="-88" id="dAM-98-S4Q"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="top" secondItem="cgt-gO-vF9" secondAttribute="bottom" constant="-70" id="gKE-Yg-rYZ"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="altTextLabel" destination="mKK-Yq-cJM" id="is0-im-zXr"/>

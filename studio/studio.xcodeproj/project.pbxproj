@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17D0AC172226E76000B98D53 /* CAShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D0AC162226E76000B98D53 /* CAShapeLayer.swift */; };
+		17D0AC192226E8BD00B98D53 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D0AC182226E8BD00B98D53 /* UIBarButtonItem.swift */; };
 		3868518A222322B9000A3C50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38685189222322B9000A3C50 /* AppDelegate.swift */; };
 		3868518C222322B9000A3C50 /* ComicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868518B222322B9000A3C50 /* ComicsViewController.swift */; };
 		3868518F222322B9000A3C50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3868518D222322B9000A3C50 /* Main.storyboard */; };
@@ -20,11 +22,12 @@
 		38DBFFA62225F0FA00D41F3C /* Monaco.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38DBFFA52225F0FA00D41F3C /* Monaco.otf */; };
 		38F6C763222633470063A3E6 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F6C762222633470063A3E6 /* Protocols.swift */; };
 		38F6C7672226C47C0063A3E6 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F6C7662226C47C0063A3E6 /* FavoritesViewController.swift */; };
-		38F6C7692226C68E0063A3E6 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F6C7682226C68E0063A3E6 /* Badge.swift */; };
 		94F13A6A6C40569AA516D719 /* Pods_studio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7AE5EE1F766BE853D149BA /* Pods_studio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17D0AC162226E76000B98D53 /* CAShapeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAShapeLayer.swift; sourceTree = "<group>"; };
+		17D0AC182226E8BD00B98D53 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
 		1C7AE5EE1F766BE853D149BA /* Pods_studio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_studio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38685186222322B9000A3C50 /* studio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = studio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38685189222322B9000A3C50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +44,6 @@
 		38DBFFA52225F0FA00D41F3C /* Monaco.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Monaco.otf; sourceTree = "<group>"; };
 		38F6C762222633470063A3E6 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		38F6C7662226C47C0063A3E6 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		38F6C7682226C68E0063A3E6 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		8394C6EC28AC75081C3101BC /* Pods-studio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studio.release.xcconfig"; path = "Pods/Target Support Files/Pods-studio/Pods-studio.release.xcconfig"; sourceTree = "<group>"; };
 		8F6921580F8E48B398BD1F1B /* Pods-studio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-studio/Pods-studio.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +60,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17D0AC152226E73D00B98D53 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				17D0AC162226E76000B98D53 /* CAShapeLayer.swift */,
+				17D0AC182226E8BD00B98D53 /* UIBarButtonItem.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2A0ACD56F610F27CF7A91E43 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +103,7 @@
 				3868518B222322B9000A3C50 /* ComicsViewController.swift */,
 				38F6C7662226C47C0063A3E6 /* FavoritesViewController.swift */,
 				38F6C762222633470063A3E6 /* Protocols.swift */,
-				38F6C7682226C68E0063A3E6 /* Badge.swift */,
+				17D0AC152226E73D00B98D53 /* Extensions */,
 				38DBFF9D2224E3F900D41F3C /* ComicsViewModel.swift */,
 				38DBFFA32224E63400D41F3C /* Comic.swift */,
 				38DBFF9F2224E53C00D41F3C /* ComicsTableViewCell.swift */,
@@ -242,9 +253,10 @@
 				38F6C7672226C47C0063A3E6 /* FavoritesViewController.swift in Sources */,
 				38F6C763222633470063A3E6 /* Protocols.swift in Sources */,
 				3868518A222322B9000A3C50 /* AppDelegate.swift in Sources */,
+				17D0AC172226E76000B98D53 /* CAShapeLayer.swift in Sources */,
+				17D0AC192226E8BD00B98D53 /* UIBarButtonItem.swift in Sources */,
 				38DBFF9E2224E3F900D41F3C /* ComicsViewModel.swift in Sources */,
 				38DBFFA12224E53C00D41F3C /* ComicsTableViewCell.swift in Sources */,
-				38F6C7692226C68E0063A3E6 /* Badge.swift in Sources */,
 				38685192222322B9000A3C50 /* studio.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

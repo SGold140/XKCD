@@ -11,53 +11,40 @@ import Alamofire
 
 class ComicsViewModel {
     var delegate: ComicsProtocol?
-    func fetchComics() //-> [Comic]
+    func fetchComics()
     {
+        
         let endpoint = "https://xkcd.now.sh/"
         var comics: [Comic] = []
         Alamofire.request(endpoint)
-            .responseJSON { response in
-                
+            .responseJSON(completionHandler: { response in
+
                 guard response.result.error == nil else { return }
                 guard let json = response.result.value as? [String: Any] else { return }
-                print(json)
-//                guard let year = json["year"] as? String else { return }
-//                guard let number = json["num"] as? String else { return }
-////                guard let image = json["img"] as? String else { return }
-////                guard let title = json["title"] as? String else { return }
-//                guard let alternateText = json["alt"] as? String else { return }
-                comics.append(Comic(title: "Comic", number: "3", image: "img", publishedDate: "10/22/12", alternateText: "alternate"))
-                self.delegate?.loadComics(comics: comics)
+                self.getData(from: URL(string: json["img"] as! String)!, completion: { (data, response, error) in
+                    guard let data = data else { return }
+                    guard error == nil else { return }
+                    
+                    let image = UIImage(data: data, scale: 1.0)
+                    let number = json["num"] as! Int
+                    let alt = json["alt"] as! String
+                    let publishedDate = self.getPublishedDate(month: json["month"] as! String, day: json["day"] as! String, year: json["year"] as! String)
+                    let title = json["title"] as! String
+                    
+                    let comic = Comic.init(title: title, number: number, image: image!, publishedDate: publishedDate, alternateText: alt)
+                    comics.append(comic)
+                    self.delegate?.loadComics(comics: comics)
+                })
+                
+            })
         }
-//
-//        guard let url = URL(string: endpoint) else {
-//            print("Error: cannot create URL")
-//            return []
-//        }
-//        var fetchedComics: [Comic] = []
-//        let urlRequest = URLRequest(url: url)
-//        let session = URLSession.shared
-//        let task = session.dataTask(with: urlRequest, completionHandler: { data, response, error in
-//            guard error == nil else { return }
-//            guard let responseData = data else { return }
-//            do {
-//                guard let comic = try JSONSerialization.jsonObject(with: responseData, options: []) as? [String: Any] else { return }
-//                print(comic.description)
-//                guard let year = comic["year"] as? String else { return }
-//                guard let number = comic["num"] as? String else { return }
-//                guard let image = comic["img"] as? String else { return }
-//                guard let title = comic["title"] as? String else { return }
-//                guard let alternateText = comic["alt"] as? String else { return }
-//
-//                let newComic = Comic(title: title, number: number, image: image, publishedDate: year, alternateText: alternateText)
-//                fetchedComics.append(newComic)
-//                print(year)
-//            } catch {
-//                print("error converting data")
-//                return
-//            }
-//        })
-//        task.resume()
-//        return fetchedComics
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
+    
+    func getPublishedDate(month: String, day: String, year: String) -> String {
+        var date: String = "\(month)/\(day)/\(year)"
+        return date
+    }
+    
 }

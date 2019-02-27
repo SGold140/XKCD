@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ComicsViewController: UIViewController, UITableViewDelegate {
   
@@ -14,7 +15,7 @@ class ComicsViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var comicsTableView: UITableView!
     var barButtonItem1: UIBarButtonItem!
     var barButtonItem2: UIBarButtonItem!
-    var barButtonItem3: UIBarButtonItem!
+//    var barButtonItem3: UIBarButtonItem!
     
     let viewModel = ComicsViewModel()
     var comicsArray: [Comic] = []
@@ -31,6 +32,7 @@ class ComicsViewController: UIViewController, UITableViewDelegate {
     }
 
     func setupNavbar() {
+        
         self.navigationController?.navigationBar.backgroundColor = UIColor.black
         self.navigationController?.navigationBar.titleTextAttributes =
         [
@@ -42,22 +44,23 @@ class ComicsViewController: UIViewController, UITableViewDelegate {
         barButtonItem1 = UIBarButtonItem(title: "<", style: .plain, target: self, action: nil)
         barButtonItem1.tintColor = UIColor.white
         barButtonItem2 = UIBarButtonItem(title: "❤️", style: .plain, target: self, action: #selector(gotoFavorites))
-        addBadge(itemvalue: "99")
-
+        let barButtonItem3 = UIBarButtonItem()
+        barButtonItem3.addBadge(number: 99, color: UIColor.white)
         navigationItem.leftBarButtonItems = [barButtonItem1]
-        navigationItem.rightBarButtonItems = [barButtonItem2]
+        navigationItem.rightBarButtonItems = [barButtonItem3, barButtonItem2]
+        
     }
     
-    func addBadge(itemvalue: String) {
-        
-        let bagButton = BadgeButton()
-        bagButton.frame = CGRect(x: 0, y: 0, width: 11, height: 11)
-        bagButton.tintColor = UIColor.black
-//        bagButton.setImage(UIImage(named: "ShoppingBag")?.withRenderingMode(.alwaysTemplate), for: .normal)
-//        bagButton.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 15)
-        bagButton.badge = itemvalue
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: bagButton)
-    }
+//    func addBadge(itemvalue: String) -> UIBarButtonItem {
+//        
+//        let badgeButton = BadgeButton()
+//        badgeButton.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
+//        badgeButton.tintColor = UIColor.black
+////        badgeButton.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 15)
+//        badgeButton.badge = itemvalue
+//        return UIBarButtonItem(customView: badgeButton)
+//        
+//    }
     
     @objc func gotoFavorites() {
         self.performSegue(withIdentifier: "favorites", sender: self)
@@ -65,7 +68,6 @@ class ComicsViewController: UIViewController, UITableViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! FavoritesViewController
-        
     }
 }
 
@@ -91,7 +93,9 @@ extension ComicsViewController: UITableViewDataSource {
 extension ComicsViewController: ComicsProtocol {
     func loadComics(comics: [Comic]) {
         self.comicsArray = comics
-        self.comicsTableView.reloadData()
+        DispatchQueue.main.async {
+            self.comicsTableView.reloadData()
+        }
     }
     
     

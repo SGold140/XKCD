@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="1093.5999999999999" y="-572.56371814092961"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorites View Controller-->
         <scene sceneID="64m-D2-vBz">
             <objects>
-                <viewController id="M74-fz-SlL" sceneMemberID="viewController">
+                <viewController id="M74-fz-SlL" customClass="FavoritesViewController" customModule="studio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dTV-Ll-am4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
