@@ -19,7 +19,7 @@ class ComicsTableViewCell: UITableViewCell {
     var comic: Comic? {
         didSet {
             titleLabel.text = comic?.title
-            numberLabel.text = String(describing: comic?.number)
+            numberLabel.text = String(describing: comic!.number)
             dateLabel.text = comic?.published_date
             altTextLabel.text = comic?.alternate_text
             comicImage.image = comic?.image
