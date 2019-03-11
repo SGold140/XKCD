@@ -26,9 +26,8 @@ class BackgroundView: UIView {
         tapLabel = UILabel()
         favLabel = UILabel()
         heartImage = UIImageView()
-        favLabel.text = "Favorite"
-        heartImage.image = "❤️".image()
-        heartImage.backgroundColor = UIColor.clear
+        heartImage.backgroundColor = UIColor.init(hexString: "96A8C8")
+        heartImage.image = UIImage(named: "❤️")
         self.addSubview(heartImage)
         self.addSubview(tapLabel)
         self.addSubview(favLabel)
@@ -38,12 +37,12 @@ class BackgroundView: UIView {
         }
         favLabel.snp.makeConstraints { (make) in
             make.centerX.equalTo(heartImage.snp.centerX)
-            make.top.equalTo(heartImage.snp.top).offset(40.0)
+            make.top.equalTo(heartImage.snp.top)
         }
         tapLabel.snp.makeConstraints { (make) in
             make.centerX.equalTo(favLabel.snp.centerX)
-            make.top.equalTo(favLabel.snp.top).offset(40.0)
-            make.bottom.equalTo(self.frame.maxY).offset(60.0)
+            make.top.equalTo(favLabel.snp.top)
+            make.centerY.equalTo(self.frame.midY)
         }
     }
     
