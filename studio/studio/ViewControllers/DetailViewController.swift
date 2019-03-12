@@ -28,9 +28,6 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         guard let comic = comic else { return }
-        print(comic)
-//        createLabels()
-        
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapToDismiss))
         self.view.addGestureRecognizer(tap)
     }
@@ -44,6 +41,7 @@ class DetailViewController: UIViewController {
          view.isUserInteractionEnabled = true
     }
     
+    // MARK: Label Functions
     func createLabels() {
         titleLabel = UILabel()
         numberDateLabel = UILabel()
@@ -57,6 +55,22 @@ class DetailViewController: UIViewController {
         makeConstraints()
     }
     
+    func setupLabels(comic: ComicBook) {
+        if let title = comic.title {
+            titleLabel.text = title
+        }
+        titleLabel.font = makeFont(size: 25)
+        if let pubDate = comic.published_date, let num = comic.number {
+            numberDateLabel.text = "#\(num) • \(pubDate)"
+        }
+        numberDateLabel.font = makeFont(size: 11)
+        if let alt = comic.alternate_text {
+            alternateLabel.text = alt
+        }
+        alternateLabel.font = makeFont(size: 11)
+        heartImageLabel.layer.opacity = self.comic?.isFavorite ?? false ? 1.0 : 0.4
+    }
+    // MARK: Constraints
     func makeConstraints() {
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalTo(view.snp.top).offset(-50.0)
@@ -80,17 +94,8 @@ class DetailViewController: UIViewController {
         }
     }
     
-    func setupLabels(comic: ComicBook) {
-        if let title = comic.title {
-            titleLabel.text = title
-        }
-        if let pubDate = comic.published_date, let num = comic.number {
-            numberDateLabel.text = "#\(num) • \(pubDate))"
-        }
-        if let alt = comic.alternate_text {
-            alternateLabel.text = alt
-        }
-        heartImageLabel.layer.opacity = self.comic?.isFavorite ?? false ? 1.0 : 0.4
+    func makeFont(size: CGFloat) -> UIFont {
+        return UIFont.init(name: "MonacoBSemi", size: size)!
     }
     
 }

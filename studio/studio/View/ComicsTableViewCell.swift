@@ -24,7 +24,6 @@ class ComicsTableViewCell: UITableViewCell, UIScrollViewDelegate {
     let customColor = UIColor.init(hexString: "#505B6E")
     
     override func awakeFromNib() {
-        print("Awaking from nib")
         super.awakeFromNib()
         setupOutlets()
         let tap = UITapGestureRecognizer(target: self, action: #selector(expandImage))
@@ -136,8 +135,6 @@ class ComicsTableViewCell: UITableViewCell, UIScrollViewDelegate {
             make.centerY.equalTo(titleLabel.snp.centerY)
         }
         
-        favButton.layer.opacity = self.comic?.isFavorite ?? false ? 1.0 : 0.25
-        
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalTo(self).offset(30.0)
             make.left.equalTo(self).offset(20.0)
@@ -167,13 +164,18 @@ class ComicsTableViewCell: UITableViewCell, UIScrollViewDelegate {
             make.centerY.equalTo(scrollView.snp.centerY)
         }
         scrollView.contentSize = comicImageView.bounds.size
+        altTextLabel.contentMode = .scaleToFill
+        altTextLabel.numberOfLines = 0
         altTextLabel.snp.makeConstraints { (make) in
             make.left.equalTo(titleLabel.snp.left)
-            make.right.equalTo(self.snp.right).offset(-20.0)
-            make.top.equalTo(scrollView.snp.bottom).offset(10.0)
-            make.height.equalTo(40.0).priority(.high)
+            make.width.equalTo(UIScreen.main.bounds.width - 50.0)
+//            make.right.equalTo(self.snp.right).offset(-20.0)
+            make.top.equalTo(scrollView.snp.bottom).offset(30.0)
+//            make.height.equalTo(100.0).priority(.high)
             make.bottom.equalTo(self).offset(-1.0).priority(.high)
         }
+//        altTextLabel.leadingMargin(pixel: 10)
+//        altTextLabel.trailingMargin(pixel: 10)
     }
     
     @objc func like() {

@@ -12,38 +12,50 @@ import SnapKit
 class BackgroundView: UIView {
     
 //    @IBOutlet var background: UIView?
-    @IBOutlet var heartImage: UIImageView!
+    @IBOutlet var heartImage: UILabel!
     @IBOutlet var tapLabel: UILabel!
     @IBOutlet var favLabel: UILabel!
+    var containerView: UIView!
     
     override func awakeFromNib() {
-//        Bundle.main.loadNibNamed("BackgroundView", owner: self, options: nil)
-        self.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+//        self.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         setupLabels()
+        
     }
     
     func setupLabels() {
+        
+        containerView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200.0))
         tapLabel = UILabel()
         favLabel = UILabel()
-        heartImage = UIImageView()
+        heartImage = UILabel()
+        
         heartImage.backgroundColor = UIColor.init(hexString: "96A8C8")
-        heartImage.image = UIImage(named: "❤️")
-        self.addSubview(heartImage)
-        self.addSubview(tapLabel)
-        self.addSubview(favLabel)
+        
+        heartImage.text = "❤️"
+        heartImage.font = UIFont(name: "MonacoBSemi", size: 50.0)
+         containerView.addSubview(heartImage)
+         containerView.addSubview(favLabel)
+         containerView.addSubview(tapLabel)
+         self.addSubview(containerView)
+      
+//        favLabel.snp.makeConstraints { (make) in
+////            make.centerY.equalTo(UIScreen.main.bounds.height / 2.7)
+////            make.bottom.equalTo(tapLabel.snp.top).offset(25.0)
+////            make.centerX.equalTo(containerView.snp.centerX)
+//        }
         heartImage.snp.makeConstraints { (make) in
-            make.centerX.equalTo(self.frame.midX)
-            make.centerY.equalTo(self.frame.midY)
+            make.bottom.equalTo(favLabel.snp.top).offset(340.0)
+            
+//            make.bottom.equalTo(favLabel.snp.top).offset(-120.0)
+            make.centerX.equalTo(containerView.snp.centerX)
+//            make.bottom.equalTo(favLabel.snp.top).offset(30.0)
         }
-        favLabel.snp.makeConstraints { (make) in
-            make.centerX.equalTo(heartImage.snp.centerX)
-            make.top.equalTo(heartImage.snp.top)
-        }
-        tapLabel.snp.makeConstraints { (make) in
-            make.centerX.equalTo(favLabel.snp.centerX)
-            make.top.equalTo(favLabel.snp.top)
-            make.centerY.equalTo(self.frame.midY)
-        }
+//        tapLabel.snp.makeConstraints { (make) in
+//            make.bottom.equalTo(containerView.snp.bottom).offset(100.0)
+//        }
+        favLabel.tintColor = UIColor.white
+        
     }
     
 }

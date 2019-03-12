@@ -23,7 +23,9 @@ class FavoritesViewController: UIViewController {
         setupNavBar()
         favTableView.delegate = self
         favTableView.dataSource = self
-        favTableView.backgroundView = BackgroundView.fromNib()
+        if favorites.count == 0 {
+            favTableView.backgroundView = BackgroundView.fromNib()
+        }
     }
     
     func setupNavBar() {
@@ -37,10 +39,6 @@ class FavoritesViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<", style: .plain, target: self, action: #selector(goBack))
         navigationItem.leftBarButtonItem?.tintColor = .white
         navigationItem.rightBarButtonItems = [addBadge(), UIBarButtonItem(title: "❤️", style: .plain, target: self, action: nil)]
-        
-        
-        
-        
     }
     
     func addBadge() -> UIBarButtonItem {

@@ -20,23 +20,21 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ajL-at-WI6">
-                    <rect key="frame" x="138" y="63" width="99" height="100"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="100" id="tXi-DV-lGP"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Favorites, Yet..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNN-Ik-tQP">
-                    <rect key="frame" x="43" y="186" width="308" height="31.5"/>
+                    <rect key="frame" x="37" y="140" width="301" height="31"/>
                     <fontDescription key="fontDescription" name="MonacoBSemi" family="MonacoBSemi" pointSize="25"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double-tap a comic and it will be added here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csj-tf-Cym">
-                    <rect key="frame" x="43" y="267" width="308" height="14"/>
+                    <rect key="frame" x="37" y="181" width="301" height="14"/>
                     <fontDescription key="fontDescription" name="MonacoBSemi" family="MonacoBSemi" pointSize="11"/>
+                    <color key="textColor" red="0.31372549019607843" green="0.35686274509803922" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFE-Kp-86B">
+                    <rect key="frame" x="188" y="130" width="0.0" height="2"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -44,22 +42,24 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <accessibility key="accessibilityConfiguration" identifier="BackgroundView"/>
             <constraints>
-                <constraint firstItem="ajL-at-WI6" firstAttribute="centerX" secondItem="Tgq-38-ASR" secondAttribute="centerX" id="4z6-Kb-3YT"/>
-                <constraint firstItem="Tgq-38-ASR" firstAttribute="trailing" secondItem="csj-tf-Cym" secondAttribute="trailing" constant="24" id="6Ah-uT-MEX"/>
-                <constraint firstItem="ajL-at-WI6" firstAttribute="top" secondItem="Tgq-38-ASR" secondAttribute="top" constant="63" id="ARU-ON-R3G"/>
-                <constraint firstItem="csj-tf-Cym" firstAttribute="leading" secondItem="Tgq-38-ASR" secondAttribute="leading" constant="43" id="BdF-xD-CWH"/>
-                <constraint firstItem="ajL-at-WI6" firstAttribute="leading" secondItem="Tgq-38-ASR" secondAttribute="leading" constant="138" id="E4v-KG-Mn6"/>
-                <constraint firstItem="Tgq-38-ASR" firstAttribute="trailing" secondItem="TNN-Ik-tQP" secondAttribute="trailing" constant="24" id="Fac-iw-MVF"/>
-                <constraint firstItem="Tgq-38-ASR" firstAttribute="trailing" secondItem="ajL-at-WI6" secondAttribute="trailing" constant="138" id="OpC-yW-VJI"/>
-                <constraint firstItem="TNN-Ik-tQP" firstAttribute="leading" secondItem="Tgq-38-ASR" secondAttribute="leading" constant="43" id="fxc-e3-d29"/>
-                <constraint firstItem="Tgq-38-ASR" firstAttribute="bottom" secondItem="csj-tf-Cym" secondAttribute="bottom" constant="94" id="qk8-jP-nFe"/>
-                <constraint firstItem="csj-tf-Cym" firstAttribute="centerX" secondItem="TNN-Ik-tQP" secondAttribute="centerX" id="uAu-4z-L4f"/>
-                <constraint firstItem="TNN-Ik-tQP" firstAttribute="top" secondItem="ajL-at-WI6" secondAttribute="bottom" constant="23" id="vYB-Sd-LdO"/>
+                <constraint firstItem="csj-tf-Cym" firstAttribute="top" secondItem="TNN-Ik-tQP" secondAttribute="bottom" constant="10" id="CbA-7i-Sgc"/>
+                <constraint firstItem="iFE-Kp-86B" firstAttribute="centerX" secondItem="Tgq-38-ASR" secondAttribute="centerX" id="Kw3-9g-TZa"/>
+                <constraint firstItem="TNN-Ik-tQP" firstAttribute="centerX" secondItem="Tgq-38-ASR" secondAttribute="centerX" id="MI9-8v-Srd"/>
+                <constraint firstItem="Tgq-38-ASR" firstAttribute="trailing" secondItem="iFE-Kp-86B" secondAttribute="trailing" constant="187" id="Ote-Qr-djV"/>
+                <constraint firstItem="csj-tf-Cym" firstAttribute="centerX" secondItem="Tgq-38-ASR" secondAttribute="centerX" id="cvB-zd-7b2"/>
+                <constraint firstItem="csj-tf-Cym" firstAttribute="trailing" secondItem="TNN-Ik-tQP" secondAttribute="trailing" id="e5q-1U-qc7"/>
+                <constraint firstItem="iFE-Kp-86B" firstAttribute="leading" secondItem="Tgq-38-ASR" secondAttribute="leading" constant="188" id="ePo-2H-jBx"/>
+                <constraint firstItem="csj-tf-Cym" firstAttribute="leading" secondItem="TNN-Ik-tQP" secondAttribute="leading" id="gee-NR-XT2"/>
+                <constraint firstItem="Tgq-38-ASR" firstAttribute="trailing" secondItem="TNN-Ik-tQP" secondAttribute="trailing" constant="37" id="h4F-SB-v0Y"/>
+                <constraint firstItem="TNN-Ik-tQP" firstAttribute="leading" secondItem="Tgq-38-ASR" secondAttribute="leading" constant="37" id="hxU-lH-1Bp"/>
+                <constraint firstItem="TNN-Ik-tQP" firstAttribute="top" secondItem="iFE-Kp-86B" secondAttribute="bottom" constant="10" id="nrZ-Ry-kKm"/>
+                <constraint firstItem="csj-tf-Cym" firstAttribute="centerY" secondItem="Tgq-38-ASR" secondAttribute="centerY" id="zak-WR-pNu"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="Tgq-38-ASR"/>
             <connections>
                 <outlet property="favLabel" destination="TNN-Ik-tQP" id="hAR-vZ-BwP"/>
+                <outlet property="heartImage" destination="iFE-Kp-86B" id="FFf-4f-Ugw"/>
                 <outlet property="tapLabel" destination="csj-tf-Cym" id="aPr-Do-No2"/>
             </connections>
             <point key="canvasLocation" x="32.799999999999997" y="-181.25937031484258"/>
