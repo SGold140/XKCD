@@ -11,15 +11,15 @@ import UIKit
 class Comic {
 
     var title: String 
-    var number: Int
-    var image: UIImage
-    var published_date: String
+    var number: String
+//    var image: UIImage?
+    var published_date: Date
     var alternate_text: String
     
-    init(title: String, number: Int, image: UIImage, publishedDate: String, alternateText: String) {
+    init(title: String, number: String,/*, image: UIImage?,*/publishedDate: Date, alternateText: String) {
         self.title = title
         self.number = number
-        self.image = image
+//        self.image = image!
         self.published_date = publishedDate
         self.alternate_text = alternateText
     }

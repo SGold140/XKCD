@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+//        let vm = ComicsViewModel()
+//        vm.fetchComics(start: 1, end: 10)
         return true
     }
 
@@ -42,18 +43,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ComicBook")
+        let batchDelete = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        _ = try? self.persistentContainer.viewContext.execute(batchDelete)
         self.saveContext()
     }
 
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
-        /*
-         The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
-         application to it. This property is optional since there are legitimate
-         error conditions that could cause the creation of the store to fail.
-        */
         let container = NSPersistentContainer(name: "studio")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -78,6 +76,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+//    func appDelegate () -> AppDelegate {
+//        return UIApplication.shared.delegate as! AppDelegate
+//    }
 
 }
 

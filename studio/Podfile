@@ -8,5 +8,6 @@ target 'studio' do
   # Pods for studio
 
 	pod 'Alamofire'
+ 	pod 'SnapKit'
 
 end
