@@ -21,13 +21,13 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Favorites, Yet..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNN-Ik-tQP">
-                    <rect key="frame" x="37" y="140" width="301" height="31"/>
+                    <rect key="frame" x="37" y="139" width="301" height="31.5"/>
                     <fontDescription key="fontDescription" name="MonacoBSemi" family="MonacoBSemi" pointSize="25"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double-tap a comic and it will be added here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csj-tf-Cym">
-                    <rect key="frame" x="37" y="181" width="301" height="14"/>
+                    <rect key="frame" x="37" y="180.5" width="301" height="14"/>
                     <fontDescription key="fontDescription" name="MonacoBSemi" family="MonacoBSemi" pointSize="11"/>
                     <color key="textColor" red="0.31372549019607843" green="0.35686274509803922" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
